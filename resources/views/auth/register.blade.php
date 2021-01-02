@@ -67,8 +67,8 @@
                                 <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Sex') }}</label>
 
                                 <div class="col-md-6">
-                                    <select name="" id="sex" class="form-control">
-                                        <option value="Não informado">Não informado</option>
+                                    <select name="sex" id="sex" class="form-control">
+                                        <option value="">Não informado</option>
                                         <option value="Masculino">Masculino</option>
                                         <option value="Feminino">Feminino</option>
                                     </select>
