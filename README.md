@@ -1,12 +1,16 @@
-# Uma simples E-commerce
+<h1 align="center"> E-commerce </h1>
 
-Está sendo desenvolvido em [Laravel](https://laravel.com)
-
-# Configuração e inicialização
-
-php artisan migrate 
-
-php artisan serve
+<p align="justify"> Uma e-commerce simples</p>
 
 
-# Dependencias
+### Como rodar a aplicação
+<p align="justify"> Depois de clonar e projecto e navegar pela pasta, execute as migrações: </p>
+
+> php artisan migrate
+
+<p align="justify"> Em seguida, ligue o servidor: </p>
+
+> php artisan serve
+
+
+> Estado do Projeto: Em desenvolvimento :warning:
