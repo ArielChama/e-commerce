@@ -22,3 +22,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/products', 'productsController@products')->name('products');
+
+Route::get('/cart', 'productsController@cart')->name('cart');
