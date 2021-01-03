@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -63,6 +63,15 @@
                         
                         <div>
                             <h5 class="text-center">Outhers informations</h5>
+                            
+                            <div class="form-group row">
+                                <label for="number-phone" class="col-md-4 col-form-label text-md-right">{{ __('Number phone') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="number-phone" type="number" class="form-control" name="number_phone">
+                                </div>
+                            </div>
+
                             <div class="form-group row">
                                 <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Sex') }}</label>
 
@@ -72,14 +81,6 @@
                                         <option value="Masculino">Masculino</option>
                                         <option value="Feminino">Feminino</option>
                                     </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="image_profile" class="col-md-4 col-form-label text-md-right">{{ __('Image of profile') }}</label>
-
-                                <div class="col-md-6">
-                                    <input type="file" name="image_profile" id="image_profile" class="form-control">
                                 </div>
                             </div>
                         </div>
