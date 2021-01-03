@@ -40,7 +40,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a href="" class="nav-link">Produtos</a>
+                            <a href="{{ route('products') }}" class="nav-link">Produtos</a>
                         </li>
 
                         @guest
