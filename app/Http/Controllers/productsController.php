@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 class productsController extends Controller
@@ -11,7 +11,9 @@ class productsController extends Controller
     */
 
     public function products() {
-        return view('products.list');
+        $routeName = Route::currentRouteName();
+
+        return view('products.list')->with('route', $routeName);
     }
 
     public function cart() {
