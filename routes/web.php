@@ -20,3 +20,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/products', 'productsController@products')->name('products');
 
 Route::get('/cart', 'productsController@cart')->name('cart');
+
+Route::get('/admin/dashboard', 'admin\adminController@dashboard')->name('admin.dashboard');
+
+Route::get('/admin', 'admin\adminController@login')->name('admin.login');
