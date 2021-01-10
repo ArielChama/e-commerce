@@ -24,3 +24,5 @@ Route::group(['prefix' => 'products'], function () {
     Route::get('/{id}', 'productsController@view')->name('products.view');
     Route::match(['get', 'post'], '/upload', );
 });
+
+Route::match(['get', 'post'], '/admin', 'admin\adminController@admin');
