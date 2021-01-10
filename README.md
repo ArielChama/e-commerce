@@ -2,9 +2,9 @@
 
 <p align="justify"> Uma e-commerce simples</p>
 
-### Configurando o ambiente
+## Configurando o ambiente
 
-## Criando o banco de dados e o usuário
+### Criando o banco de dados e o usuário
 
 > CREATE DATABASE e_commerce;
 
@@ -12,7 +12,7 @@
 
 > GRANT ALL TO e_commerce.* TO e_commerce_user@'%';
 
-## Instalando modulos
+### Instalando dependências e configurando
 
 > git clone https://github.com/ArielChama/e-commerce
 
@@ -20,13 +20,25 @@
 
 <p align="justify"> Rodando o vueJs: </p>
 
+> composer install
+
+<p align="justify"> Rodando o vueJs: </p>
+
 > npm install && npm run dev
+
+<p align="justify"> Configurando arquivo env: </p>
+
+> cp .env.example .env
+
+<p align="justify"> Gerando nova chave: </p>
+
+> php artisan key:generate
 
 <p align="justify"> Executando as migrações: </p>
 
 > php artisan migrate
 
-## Rodando a aplicação :arrow_forward:
+### Rodando a aplicação :arrow_forward:
 
 > php artisan serve :signal_strength:
 
@@ -34,5 +46,5 @@
 
 > localhost:8000/
 
-
-> Estado do Projeto: Em desenvolvimento :warning:
+#### Status
+> Em desenvolvimento :warning:
