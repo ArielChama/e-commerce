@@ -18,7 +18,7 @@
 
 > cd e-commerce
 
-<p align="justify"> Rodando o vueJs: </p>
+<p align="justify"> Instalando dependências: </p>
 
 > composer install
 
