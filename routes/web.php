@@ -22,4 +22,5 @@ Route::get('/cart', 'productsController@cart')->name('cart');
 Route::group(['prefix' => 'products'], function () {
     Route::get('/', 'productsController@products')->name('products.list');
     Route::get('/{id}', 'productsController@view')->name('products.view');
+    Route::match(['get', 'post'], '/upload', );
 });

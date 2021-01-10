@@ -23,4 +23,8 @@ class productsController extends Controller
     public function view($id) {
         return view('products.view')->with('id', $id);
     }
+
+    public function upload(Request $request) {
+        return view('products.upload');
+    }
 }
