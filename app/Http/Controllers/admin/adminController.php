@@ -15,4 +15,10 @@ class adminController extends Controller
     public function dashboard() {
         return view('admin.dashboard');
     }
+
+    public function publish(Request $request) {
+        $request->all();
+
+        return redirect()->route('admin.dashboard');
+    }
 }

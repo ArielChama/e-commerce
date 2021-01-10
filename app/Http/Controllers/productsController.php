@@ -21,6 +21,6 @@ class productsController extends Controller
     }
 
     public function view($id) {
-        return view('products.view')->withId($id);
+        return view('products.view')->with('id', $id);
     }
 }
