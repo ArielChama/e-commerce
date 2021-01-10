@@ -1,6 +1,6 @@
 <h1 align="center"> E-commerce </h1>
 
-<p align="justify"> Uma e-commerce simples</p>
+<p align="justify"> Uma simples e-commerce sendo desenvolvido em laravel versão 7.</p>
 
 ## Configurando o ambiente
 
