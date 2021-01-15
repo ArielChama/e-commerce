@@ -46,5 +46,11 @@
 
 > localhost:8000/
 
+### Administraçao
+
+<p align="justify">Criando uma conta admin</p>
+
+> php artisan make:admin
+
 #### Status
 > Em desenvolvimento :warning:
