@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Endereço de email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Palavra-passe') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirme a palavra-passe') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -65,7 +65,7 @@
                             <h5 class="text-center">Outhers informations</h5>
                             
                             <div class="form-group row">
-                                <label for="number-phone" class="col-md-4 col-form-label text-md-right">{{ __('Number phone') }}</label>
+                                <label for="number-phone" class="col-md-4 col-form-label text-md-right">{{ __('Número de telefone') }}</label>
     
                                 <div class="col-md-6">
                                     <input id="number-phone" type="number" class="form-control" name="number_phone">
@@ -73,11 +73,11 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Sex') }}</label>
+                                <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Sexo') }}</label>
 
                                 <div class="col-md-6">
                                     <select name="sex" id="sex" class="form-control">
-                                        <option value="">Não informado</option>
+                                        <option value="Não informado">Não informado</option>
                                         <option value="Masculino">Masculino</option>
                                         <option value="Feminino">Feminino</option>
                                     </select>
