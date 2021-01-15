@@ -25,4 +25,4 @@ Route::group(['prefix' => 'products'], function () {
     Route::match(['get', 'post'], '/upload', );
 });
 
-Route::match(['get', 'post'], '/admin', 'admin\adminController@admin');
+Route::match(['get', 'post'], '/admin', 'admin\adminController@admin')->middleware(['checkAdmin', 'auth']);
