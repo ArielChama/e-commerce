@@ -22,7 +22,11 @@ Route::get('/cart', 'productsController@cart')->name('cart');
 Route::group(['prefix' => 'products'], function () {
     Route::get('/', 'productsController@products')->name('products.list');
     Route::get('/{id}', 'productsController@view')->name('products.view');
-    Route::match(['get', 'post'], '/upload', );
 });
 
-Route::match(['get', 'post'], '/admin', 'admin\adminController@admin')->middleware(['checkAdmin', 'auth']);
+Route::group(['prefix' => 'admin', 'middleware' => ['checkAdmin', 'auth'], 'namespace' => 'admin'], function () {
+    Route::get('/', 'adminController@admin')->name('admin.dashboard');
+    Route::get('/register/products', 'adminController@registerProducts');
+    Route::get('/list/products', 'listController@Products');
+    Route::get('/list/users', 'listController@users');
+});

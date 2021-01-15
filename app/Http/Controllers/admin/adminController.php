@@ -16,4 +16,9 @@ class adminController extends Controller
         return view('admin.dashboard')->with('isAdmin', $isAdmin);
         
     }
+
+    public function registerProducts() 
+    {
+        return view('admin.registerProducts');
+    }
 }
