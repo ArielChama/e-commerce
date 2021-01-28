@@ -10,7 +10,11 @@ class adminController extends Controller
 {
     //
 
-    public function admin() 
+    public function login() {
+        return view('admin.login');
+    }
+    
+    public function dashboard() 
     {
         $isAdmin = Auth::user()->isAdmin;
         return view('admin.dashboard')->with('isAdmin', $isAdmin);

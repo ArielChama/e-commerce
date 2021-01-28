@@ -24,9 +24,10 @@ Route::group(['prefix' => 'products'], function () {
     Route::get('/{id}', 'productsController@view')->name('products.view');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['checkAdmin', 'auth'], 'namespace' => 'admin'], function () {
-    Route::get('/', 'adminController@admin')->name('admin.dashboard');
-    Route::get('/register/products', 'adminController@registerProducts');
-    Route::get('/list/products', 'listController@Products');
-    Route::get('/list/users', 'listController@users');
+Route::get('/admin', 'admin\adminController@login')->name('admin.login');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['checkAdmin'], 'namespace' => 'admin'], function () {
+    Route::get('/dashboard', 'adminController@dashboard')->name('admin.dashboard');
+    Route::get('/produscts/register', 'adminController@registerProducts')->name('admin.products.register');
+    Route::get('/products/list', 'listController@Products')->name('admin.products.list');
 });

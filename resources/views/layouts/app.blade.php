@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -75,14 +75,6 @@
                                 </form>
                             </li>
                         @endguest
-
-                        @isset($route)
-                            @if ($route == "products.list")
-                                <form action="" method="get">
-                                    <input type="search" name="" id="" class="form-control" placeholder="Buscar produto: ">
-                                </form>
-                            @endif
-                        @endisset
                     </ul>
                 </div>
             </div>
