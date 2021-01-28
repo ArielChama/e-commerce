@@ -24,9 +24,9 @@ Route::group(['prefix' => 'products'], function () {
     Route::get('/{id}', 'productsController@view')->name('products.view');
 });
 
-Route::get('/admin', 'admin\adminController@login')->name('admin.login');
+Route::match(['get', 'post'], '/admin', 'admin\loginController@login')->name('admin.login');
 
-Route::group(['prefix' => 'admin', 'middleware' => ['checkAdmin'], 'namespace' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
     Route::get('/dashboard', 'adminController@dashboard')->name('admin.dashboard');
     Route::get('/produscts/register', 'adminController@registerProducts')->name('admin.products.register');
     Route::get('/products/list', 'listController@Products')->name('admin.products.list');

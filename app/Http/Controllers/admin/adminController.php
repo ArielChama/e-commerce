@@ -9,15 +9,13 @@ use Illuminate\Support\Facades\Auth;
 class adminController extends Controller
 {
     //
-
-    public function login() {
-        return view('admin.login');
+    public function __construct() {
+        $this->middleware(['auth', 'checkAdmin']);
     }
     
     public function dashboard() 
     {
-        $isAdmin = Auth::user()->isAdmin;
-        return view('admin.dashboard')->with('isAdmin', $isAdmin);
+        return view('admin.dashboard');
         
     }
 

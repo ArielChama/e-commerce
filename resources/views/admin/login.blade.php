@@ -28,10 +28,11 @@
                     <h4 class="text-center">Paínel Administrativo</h4>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
-                        <input type="text" name="" class="form-control mb-3" placeholder="Email: ">
+                    <form action="{{ route('admin.login') }}" method="post">
+                        @csrf
+                        <input type="email" name="email" class="form-control mb-3" placeholder="Email: ">
         
-                        <input type="password" name="" class="form-control mb-3" placeholder="Palavra-passe: ">
+                        <input type="password" name="password" class="form-control mb-3" placeholder="Palavra-passe: ">
         
                         <button type="submit" class="btn btn-primary">
                             Entrar
