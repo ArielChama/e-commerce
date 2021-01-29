@@ -4,3 +4,8 @@
     margin-right: auto;
     margin-top: 17rem;
 }
+
+.form-input {
+    border-radius: 2rem;
+    height: 3rem;
+}
