@@ -18,11 +18,11 @@
 
 > cd e-commerce
 
-<p align="justify"> Instalando dependências: </p>
+<p align="justify"> Instalando dependências do php: </p>
 
 > composer install
 
-<p align="justify"> Rodando o vueJs: </p>
+<p align="justify"> Instalando os modulos do Node e rodando o laravel mix: </p>
 
 > npm install && npm run dev
 
