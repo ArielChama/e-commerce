@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\products;
 
 class productsController extends Controller
 {
@@ -13,9 +14,11 @@ class productsController extends Controller
 
     public function products() 
     {
-        $routeName = Route::currentRouteName();
+        $route = Route::currentRouteName();
 
-        return view('products.list')->with('route', $routeName);
+        $products = products::All();
+
+        return view('products.list', ['route' => $route, 'products' => $products]);
     }
 
     public function cart() 
@@ -25,7 +28,8 @@ class productsController extends Controller
 
     public function view($id) 
     {
-        return view('products.view')->with('id', $id);
+        $product = products::find($id);
+        return view('products.view', ['id' => $id, 'product' => $product]);
     }
 
     public function upload(Request $request) 

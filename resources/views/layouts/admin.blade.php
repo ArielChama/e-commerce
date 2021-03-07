@@ -39,11 +39,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="{{ route('home') }}" class="nav-link">{{ __('Página inicial') }}</a>
+                            <a href="{{ route('admin.dashboard') }}" class="nav-link">{{ __('Página inicial') }}</a>
                         </li>
     
                         <li class="nav-item">
-                            <a href="" class="nav-link">Cadastrar produto</a>
+                            <a href="{{ route('admin.products.register') }}" class="nav-link">Cadastrar produto</a>
                         </li>
     
                         <li class="nav-item">

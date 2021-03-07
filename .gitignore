@@ -10,3 +10,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+#################################
+# Imagens minhas usadas para testes
+##################################
+
+/public/img/products
