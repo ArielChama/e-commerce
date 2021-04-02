@@ -4,6 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+window.Popper = require('popper.js').default;
+window.$ = window.jQuery = require('jquery');
+
 require('./bootstrap');
 
 window.Vue = require('vue');

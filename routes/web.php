@@ -27,8 +27,11 @@ Route::group(['prefix' => 'products'], function () {
 Route::match(['get', 'post'], '/admin', 'admin\loginController@login')->name('admin.login');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
-    Route::get('/dashboard', 'adminController@dashboard')->name('admin.dashboard');
-    Route::get('/products/register', 'registerProductsController@register')->name('admin.products.register');
-    Route::post('/products/registered', 'registerProductsController@registered')->name('admin.products.registered');
-    Route::get('/products/list', 'listController@Products')->name('admin.products.list');
+    Route::get('/dashboard', 'mainController@dashboard')->name('admin.dashboard');
+    Route::get('/products/register', 'productsAdminController@register')->name('admin.products.register');
+    Route::post('/products/registered', 'productsAdminController@registered')->name('admin.products.registered');
+    Route::get('/products/edit/{id}', 'productsAdminController@edit')->name('admin.products.edit');
+    Route::post('/products/update/{id}', 'productsAdminController@update')->name('admin.products.update');
+    Route::get('/products/delete/{id}', 'productsAdminController@delete')->name('admin.products.delete');
+    Route::get('/users/delete/{id}', 'usersAdminController@delete')->name('admin.users.delete');
 });

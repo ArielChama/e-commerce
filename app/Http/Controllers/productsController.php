@@ -31,9 +31,4 @@ class productsController extends Controller
         $product = products::find($id);
         return view('products.view', ['id' => $id, 'product' => $product]);
     }
-
-    public function upload(Request $request) 
-    {
-        return view('products.upload');
-    }
 }

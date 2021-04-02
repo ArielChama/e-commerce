@@ -10,15 +10,14 @@
                 
                 <select name="" id="" class="form-control w-25">
                     <option value="">Eletrodomésticos</option>
-                    <option value="">Celulares</option>
-                    <option value="">Computadores</option>
+                    <option value="">Aparelhos eletronicos</option>
                 </select>
             </div>
 
             <div class="mt-5">
                 <div class="row">
                     @foreach ($products as $product)
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-5">
                         <div class="card">
                             <img src="storage/products/{{ $product->image }}" alt="" class="image-fluid image-product">
                             <div class="card-body">
