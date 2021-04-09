@@ -5,7 +5,7 @@
 @section('content')
     <section>
         <div class="container">
-            <div class="pt-5 mb-5">
+            <div class="pt-5 mt-5 mb-5 pb-5">
                 <div class="row">
                     <div class="col-md-6">
                         <img src="/img/undraw_web_shopping_dd4l.png" alt="" class="img-fluid">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="pt-5">
+            <div class="pt-5 pb-5">
                 <div class="">
                     <h2 class="text-center mb-5">Últimos lançamentos</h2>
                     <div class="">
@@ -41,11 +41,15 @@
                             </div>
                             @php
                                 $count++;
-                                if ($count == 3) {
+                                if ($count == 4) {
                                     break;
                                 }
                             @endphp
                             @endforeach
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <a href="{{ route('products.list') }}" class="btn btn-primary w-25">Ver mais</a>
                         </div>
                     </div>
                 </div>

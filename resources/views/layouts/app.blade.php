@@ -90,8 +90,8 @@
             @yield('content')
         </main>
 
-        <footer class="bg-secondary">
-            <div class="container mt-5 pt-5">
+        <footer class="bg-secondary p-2">
+            <div class="container mt-5 pt-4 pb-4">
                 <div class="row ">
                     <div class="col-md-3 mb-3">
                         <span class="copy">&copy;2020 Todos os direitos reservados.</span>
@@ -116,7 +116,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 mb-2">
-                        <h4>Redes Social</h4>
+                        <h4>Redes Sociais</h4>
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a href="" class="nav-link">Facebook</a>
@@ -124,10 +124,6 @@
                             
                             <li class="nav-item">
                                 <a href="" class="nav-link">Instagram</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a href="" class="nav-link">Twiter</a>
                             </li>
                         </ul>
                     </div>

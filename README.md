@@ -52,5 +52,6 @@
 
 > php artisan make:admin
 
-#### Status
+#### ATT
+> Layout temporário, usado apenas para testes
 > Em desenvolvimento :warning:
