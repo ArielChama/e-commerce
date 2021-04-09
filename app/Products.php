@@ -14,4 +14,16 @@ class products extends Model
     protected $fillable = [
         'name', 'description', 'price', 'quantity','image', 'category'
     ];
+
+    function uploadImage($request)
+        {
+            if ($request->file('image')->isValid() && $request->hasFile('image')) {
+                $name = uniqid(date('HisYmd'));
+                $extension = $request->image->extension();
+                $nameImage = "{$name}.{$extension}";
+                $upload = $request->image->storeAs('products', $nameImage);
+
+                return $nameImage;
+            }
+        }
 }

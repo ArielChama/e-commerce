@@ -21,18 +21,6 @@ class productsAdminController extends Controller
 
     public function registered(Request $request) 
     {
-        function uploadImage($request)
-        {
-            if ($request->file('image')->isValid() && $request->hasFile('image')) {
-                $name = uniqid(date('HisYmd'));
-                $extension = $request->image->extension();
-                $nameImage = "{$name}.{$extension}";
-                $upload = $request->image->storeAs('products', $nameImage);
-
-                return $nameImage;
-            }
-        }
-
         $products = new products();
 
         $products->name = $request->name;
@@ -40,7 +28,7 @@ class productsAdminController extends Controller
         $products->price = $request->price;
         $products->quantity = $request->quantity;
         $products->category = $request->category;
-        $products->image = uploadImage($request);
+        $products->image = $products->uploadImage($request);
         $products->category = $request->category;
         $products->save();
 
@@ -55,19 +43,6 @@ class productsAdminController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Lógica temporária
-        function uploadImage($request)
-        {
-            if ($request->file('image')->isValid() && $request->hasFile('image')) {
-                $name = uniqid(date('HisYmd'));
-                $extension = $request->image->extension();
-                $nameImage = "{$name}.{$extension}";
-                $upload = $request->image->storeAs('products', $nameImage);
-
-                return $nameImage;
-            }
-        }
-
         $products = products::find($id);
         $products->name = $request->name;
         $products->description = $request->description;
@@ -77,7 +52,7 @@ class productsAdminController extends Controller
         if ($request->file('image') == "") {
             $products->image = $products->image;
         } else {
-            $products->image = uploadImage($request);
+            $products->image = $products->uploadImage($request);
         }
 
         $products->save();
